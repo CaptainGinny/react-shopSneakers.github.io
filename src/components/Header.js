@@ -8,7 +8,7 @@ export default function Header(props) {
 
   return (
     <header>
-      <Link to="" style={{textDecoration: 'none'}}>
+      <Link to="/" style={{textDecoration: 'none'}}>
         <div className="headerLeft">
           <img width={40} height={40} src="img/logo.svg" alt="logo"/>
           <div>
@@ -17,18 +17,18 @@ export default function Header(props) {
           </div>
         </div>
       </Link>
-      <ul className="headerRight">
+      <ul className="/headerRight">
         <li onClick={props.onClickCart}>
           <img width={18} height={18} src="img/cart.svg" alt="cart"/>
             <span>{totalPrice} руб.</span>
         </li>
         <li>
-        <Link to="favorites">
+        <Link to="/favorites">
           <img width={18} height={18} src="img/heart.svg" alt="favorites"/>
         </Link>
         </li>
         <li>
-        <Link to="orders">
+        <Link to="/orders">
           <img width={18} height={18} src="img/user.svg" alt="user"/>
         </Link>
         </li>
