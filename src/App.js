@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import axios from 'axios'
 import Header from "./components/Header";
 import Drawer from "./components/Drawer";
@@ -92,7 +92,6 @@ function App() {
   return (
     <AppContext.Provider value={{ items, cartItems, favorites,
        isItemAdded, setCartOpened, setCartItems, onAddToCart }}>
-      <BrowserRouter>
         <div className="wrapper">
           <Drawer 
             items={cartItems} 
@@ -125,7 +124,6 @@ function App() {
             </Route>
           </Routes>
         </div>
-      </BrowserRouter>
     </AppContext.Provider>
   );
 }
