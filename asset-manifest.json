@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-shopSneakers.github.io/static/css/main.737ddcfe.css",
+    "main.js": "/react-shopSneakers.github.io/static/js/main.a10617c6.js",
+    "index.html": "/react-shopSneakers.github.io/index.html",
+    "main.737ddcfe.css.map": "/react-shopSneakers.github.io/static/css/main.737ddcfe.css.map",
+    "main.a10617c6.js.map": "/react-shopSneakers.github.io/static/js/main.a10617c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.737ddcfe.css",
+    "static/js/main.a10617c6.js"
+  ]
+}
