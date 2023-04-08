@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes, HashRouter } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import axios from 'axios'
 import Header from "./components/Header";
 import Drawer from "./components/Drawer";
@@ -100,9 +100,8 @@ function App() {
             opened={cartOpened}
           />
           <Header onClickCart={() => setCartOpened(true)}/>
-          <HashRouter>
             <Routes>
-              <Route path="" exact
+              <Route path="/" index
                 element={
                 <Home
                   items={items}
@@ -113,18 +112,17 @@ function App() {
                   onAddToCart={onAddToCart}
                   setSearchValue={setSearchValue} />}>
               </Route>
-              <Route path="favorites" exact
+              <Route path="/favorites" 
                 element={<Favotites 
                   items={favorites}
                   onAddToFavorite={onAddToFavorite} 
                   isLoading={isLoading}/>
                 }>
               </Route>
-              <Route path="orders" exact
+              <Route path="/orders" 
                 element={<Orders/>}>
               </Route>
             </Routes>
-          </HashRouter>
         </div>
     </AppContext.Provider>
   );
