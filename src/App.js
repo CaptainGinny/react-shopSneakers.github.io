@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, HashRouter } from 'react-router-dom'
 import axios from 'axios'
 import Header from "./components/Header";
 import Drawer from "./components/Drawer";
@@ -100,29 +100,31 @@ function App() {
             opened={cartOpened}
           />
           <Header onClickCart={() => setCartOpened(true)}/>
-          <Routes>
-            <Route path="" exact
-              element={
-              <Home
-                items={items}
-                cartItems={cartItems}
-                searchValue={searchValue}
-                onChangeSearchInput={onChangeSearchInput}
-                onAddToFavorite={onAddToFavorite}
-                onAddToCart={onAddToCart}
-                setSearchValue={setSearchValue} />}>
-            </Route>
-            <Route path="favorites" exact
-              element={<Favotites 
-                items={favorites}
-                onAddToFavorite={onAddToFavorite} 
-                isLoading={isLoading}/>
-              }>
-            </Route>
-            <Route path="orders" exact
-              element={<Orders/>}>
-            </Route>
-          </Routes>
+          <HashRouter>
+            <Routes>
+              <Route path="" exact
+                element={
+                <Home
+                  items={items}
+                  cartItems={cartItems}
+                  searchValue={searchValue}
+                  onChangeSearchInput={onChangeSearchInput}
+                  onAddToFavorite={onAddToFavorite}
+                  onAddToCart={onAddToCart}
+                  setSearchValue={setSearchValue} />}>
+              </Route>
+              <Route path="favorites" exact
+                element={<Favotites 
+                  items={favorites}
+                  onAddToFavorite={onAddToFavorite} 
+                  isLoading={isLoading}/>
+                }>
+              </Route>
+              <Route path="orders" exact
+                element={<Orders/>}>
+              </Route>
+            </Routes>
+          </HashRouter>
         </div>
     </AppContext.Provider>
   );
